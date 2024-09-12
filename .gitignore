@@ -33,3 +33,5 @@
 .history
 *.dSYM
 *.app
+**/bin/**/**
+interview-questions/bin/**

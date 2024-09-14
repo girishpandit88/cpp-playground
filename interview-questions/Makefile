@@ -8,6 +8,8 @@ LIBPATH = $(SDKPATH)/usr/lib
 # Define compiler flags with dynamic paths
 CFLAGS = -Wall -std=c++20 -isysroot $(SDKPATH) -L$(LIBPATH)
 
+CXXFLAGS = -Wall -std=c++20 -isysroot $(SDKPATH) -L$(LIBPATH)
+
 # Determine the directory containing the Makefile
 MAKEFILE_DIR = $(dir $(lastword $(MAKEFILE_LIST)))
 
@@ -34,11 +36,11 @@ all: $(TARGET)
 
 # Link object files to create the executable
 $(TARGET): $(OBJDIR) $(OBJS)
-	$(CC) $(CFLAGS) -o $@ $(OBJS)
+	$(CC) $(CXXFLAGS) -o $@ $(OBJS)
 
 # Compile source files to object files
 $(OBJDIR)/%.o: $(MAKEFILE_DIR)%.cpp | $(OBJDIR)
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CXXFLAGS) -c $< -o $@
 
 # Clean up generated files
 clean:

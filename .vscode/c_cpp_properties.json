@@ -9,7 +9,7 @@
             "macFrameworkPath": [
                 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks"
             ],
-            "compilerPath": "/Library/Developer/CommandLineTools/usr/bin/clang++",
+            "compilerPath": "/opt/clang+llvm/clang+llvm-17.0.6/bin/clang++",
             "cStandard": "c17",
             "cppStandard": "c++20",
             "intelliSenseMode": "macos-clang-arm64",

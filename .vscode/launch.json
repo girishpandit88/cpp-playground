@@ -2,11 +2,11 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Run Program with Sysroot (ARM LLDB)",
+            "name": "C/C++: clang++ build and debug active file",
             "type": "cppdbg",
             "request": "launch",
-            // "program": "${workspaceFolder}/interview-questions/bin/", // Replace with your executable name
-            "args": [], // Command-line arguments if any
+            "program": "${fileDirname}/bin/${fileBasenameNoExtension}",
+            "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}/interview-questions", // Set to the directory where Makefile is located
             "environment": [
